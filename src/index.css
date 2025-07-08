@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Rajdhani:wght@400;500;600;700&display=swap");
+
+@layer base {
+  :root {
+    --background: 220 13% 9%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 13% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 13% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 38 100% 50%;
+    --primary-foreground: 220 13% 9%;
+
+    --secondary: 16 100% 50%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 13% 15%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 38 100% 50%;
+    --accent-foreground: 220 13% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 13% 20%;
+    --input: 220 13% 20%;
+    --ring: 38 100% 50%;
+
+    --radius: 0.5rem;
+  }
+
+  body {
+    font-family: "Inter", sans-serif;
+    background: white;
+    color: hsl(var(--foreground));
+  }
+
+  .font-heading {
+    font-family: "Rajdhani", sans-serif;
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    /* background: linear-gradient(
+      135deg,
+      hsl(220 13% 9%) 0%,
+      hsl(220 13% 12%) 50%,
+      hsl(220 13% 15%) 100%
+    ); */
+    background-color: white;
+  }
+
+  .accent-gradient {
+    background: linear-gradient(
+      45deg,
+      hsl(38 100% 50%) 0%,
+      hsl(16 100% 50%) 100%
+    );
+  }
+
+  .service-card {
+    @apply bg-card/50 backdrop-blur-sm border border-border/50 rounded-lg p-6 transition-all duration-300 hover:bg-card/70 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-[#8A0707] via-[#C80F0F] to-[#FF2E2E] text-white from-primary to-secondary text-primary-foreground px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 hover:scale-105;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-primary text-primary px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:scale-105;
+  }
+
+  .fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+  }
+
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px hsl(38 100% 50% / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px hsl(38 100% 50% / 0.6);
+  }
+}
+
+@keyframes rotate3d {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.rotate-3d {
+  animation: rotate3d 10s linear infinite;
+}
+
+.perspective {
+  perspective: 1000px;
+}
