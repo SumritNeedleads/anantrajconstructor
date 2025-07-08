@@ -10,7 +10,7 @@ const ProjectsPreview = () => {
       location: 'Mumbai, Maharashtra',
       service: 'RCC Slab & Wall Cutting',
       status: 'Completed',
-      image: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=400&h=300&fit=crop',
+      image: '/images/home-recent-project-1.jpg',
       description: 'Precision core cutting for ventilation and electrical systems in 15-story commercial building.'
     },
     {
@@ -19,7 +19,7 @@ const ProjectsPreview = () => {
       location: 'Pune, Maharashtra',
       service: 'Beam Cutting & Rebaring',
       status: 'Completed',
-      image: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=400&h=300&fit=crop',
+      image: '/images/home-recent-project-2.jpg',
       description: 'Structural modifications for machinery installation with wire saw cutting technology.'
     },
     {
@@ -28,7 +28,7 @@ const ProjectsPreview = () => {
       location: 'Delhi NCR',
       service: 'RCC Core Cutting',
       status: 'Completed',
-      image: 'https://images.unsplash.com/photo-1524230572899-a752b3835840?w=400&h=300&fit=crop',
+      image: '/images/home-recent-project-3.jpg',
       description: 'Creating precise openings for elevator shaft and stairwell modifications.'
     }
   ];
